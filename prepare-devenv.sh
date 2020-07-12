@@ -14,7 +14,7 @@ elif [[ $1 != "blue" ]] && [[ $1 != "s" ]] && [[ $1 != "x" ]]; then
     return
 fi
 
-if [[ $(dpkg-query -s python3-venv 2>&1) == *'is not installed'* ]]; then
+if [[ $(dpkg-query -s python3.4-venv 2>&1) == *'is not installed'* ]]; then
     printf "\nPackage python3-venv is missing.\nOn Debian-like distros, run:\n\napt install python3-venv\n\n"
     return
 fi
